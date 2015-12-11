@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		<canvas width="500" height="500"></canvas>
+		<script type="text/javascript">
+			var can=document.querySelector('canvas'),
+			canvas=can.getContext('2d');
+			// console.log(canvas);
+			
+			/*var linearGradient=canvas.createLinearGradient(0,0,300,300);
+
+			linearGradient.addColorStop(0,'#aaa');
+
+			linearGradient.addColorStop(0.5,'blue');
+
+			linearGradient.addColorStop(1,'#eee');
+			canvas.fillStyle=linearGradient;*/
+
+			var radialGradient=canvas.createRadialGradient(150,150,50,150,150,300);
+			radialGradient.addColorStop(0,'#222');
+			radialGradient.addColorStop(1,'#eee');
+			canvas.fillStyle=radialGradient;
+
+			canvas.fillRect(0,0,300,300);
+
+			console.log(can.toDataURL());
+		</script>
+	</body>
+</html>
